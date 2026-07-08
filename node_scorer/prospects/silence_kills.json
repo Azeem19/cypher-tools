@@ -1,0 +1,37 @@
+{
+  "org": "Silence Kills",
+  "city": "Washington, DC",
+  "contact": "(on file — omitted from repo per no-PII mandate)",
+  "source": "existing partnership (SOW/MOU, Summer 2026)",
+  "notes": "First-test prospect for the Node-Readiness Scorer. Silence Kills is the confirmed DC node partner. Entity is a confirmed 501(c)(3); the PABC eligibility gate reads GREEN. Scores below are hand-entered from the existing partnership record (SOW/MOU) using only already-shared, non-PII context.",
+  "dimensions": {
+    "community_trust": {
+      "score": 3,
+      "evidence": "Established DC presence with an active, trusting base — the anchor relationship the studio built the first node around."
+    },
+    "gathering_space": {
+      "score": 2,
+      "evidence": "Convenes community regularly; a gathering venue is present though not yet a fixed dedicated space."
+    },
+    "elder_access": {
+      "score": 3,
+      "evidence": "Direct, sustained access to community elders — the gate the studio treats as sovereignty."
+    },
+    "consent_capacity": {
+      "score": 2,
+      "evidence": "Willing and able to run consent-first intake; capacity present, formal process still being stood up."
+    },
+    "funding_alignment": {
+      "score": 3,
+      "evidence": "PABC FY2027 eligibility GREEN (501(c)(3) confirmed); funding path is live and aligned."
+    },
+    "cobranding_will": {
+      "score": 3,
+      "evidence": "MOU in place; explicit will to co-brand the Remembrance node with Cypher."
+    },
+    "reciprocity_fit": {
+      "score": 3,
+      "evidence": "Genuinely mutual exchange — the community gets data storytelling, MEL, and impact narrative back; reciprocity gate reads strong."
+    }
+  }
+}

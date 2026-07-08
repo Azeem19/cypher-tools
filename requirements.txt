@@ -1,0 +1,6 @@
+# Node-Readiness Scorer (Build 1) — core dependency
+pyyaml>=6.0
+
+# Optional add-ons (import-guarded; the scoring core runs without them):
+#   anthropic>=0.40    # the `draft` judgment-clone agent (Block 05)
+#   requests>=2.31     # Airtable sync adapter

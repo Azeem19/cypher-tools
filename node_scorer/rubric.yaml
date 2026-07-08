@@ -1,0 +1,67 @@
+# Node-Readiness Scorer — Scoring Rubric
+# ---------------------------------------------------------------------------
+# Encoded VERBATIM from the Cypher Logic Model §06 (reproduced in the Build
+# Spec Pack, pp. 2–3). This is data, not code: tune the rubric here without
+# touching scorer.py. Every dimension is scored 1 (weak) / 2 (present) /
+# 3 (strong). The three gates are the studio's non-negotiables — sovereignty,
+# reverence, reciprocity — and any gate at 1 overrides the total to NURTURE.
+#
+# "The gates are sovereignty, reverence, and reciprocity —
+#  the three things the studio never trades."
+
+scale:
+  min: 1
+  max: 3
+  labels:
+    1: weak
+    2: present
+    3: strong
+
+# The 7 dimensions. `gate: true` marks the three that can override the total.
+dimensions:
+  - key: community_trust
+    label: Community trust
+    gate: false
+  - key: gathering_space
+    label: Gathering space
+    gate: false
+  - key: elder_access
+    label: Elder access
+    gate: true            # sovereignty
+  - key: consent_capacity
+    label: Consent capacity
+    gate: true            # reverence
+  - key: funding_alignment
+    label: Funding alignment
+    gate: false
+  - key: cobranding_will
+    label: Co-branding will
+    gate: false
+  - key: reciprocity_fit
+    label: Reciprocity fit
+    gate: true            # reciprocity
+
+# Routing thresholds on the summed total (7–21).
+# A gate at 1 short-circuits this table straight to NURTURE_ONLY.
+routing:
+  - min: 16
+    max: 21
+    verdict: STAND_UP_NODE
+    drip_tier: Engaged
+    note: "Stand up the node, run the protocol."
+  - min: 11
+    max: 15
+    verdict: REFINE_DRIP
+    drip_tier: Warm
+    note: "Refine, re-score, place on drip."
+  - min: 7
+    max: 10
+    verdict: NURTURE_ONLY
+    drip_tier: Cold
+    note: "Nurture only."
+
+# Verdict applied when any gate dimension scores 1 (regardless of total).
+gate_override:
+  verdict: NURTURE_ONLY
+  drip_tier: Cold
+  note: "A gate (sovereignty / reverence / reciprocity) read weak — nurture only, never trade the gate."
